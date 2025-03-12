@@ -1,0 +1,5 @@
+
+# OpenAI API Key
+# Note: This file is only for local development
+# For production, set this via your hosting provider's environment variables
+VITE_OPENAI_API_KEY=
