@@ -46,7 +46,12 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
   const handlePopupSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsPopupOpen(false);
-    // You can use formData here if needed
+    // You can use formData here if needed with handleImagesSelected
+  };
+
+  const handleMailchimpSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Handle Mailchimp submission if needed beyond the default form action
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -73,11 +78,13 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
           />
         </div>
 
-        {/* Popup Form with Mailchimp Integration */}
+        {/* Popup Form */}
         {isPopupOpen && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md">
               <h3 className="text-lg font-semibold mb-4">Upload Image Details</h3>
+              
+              {/* Image Details Form */}
               <form onSubmit={handlePopupSubmit}>
                 <div className="mb-4">
                   <label className="block text-sm font-medium mb-1">Title</label>
@@ -101,33 +108,6 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
                     rows={3}
                   />
                 </div>
-                
-                {/* Mailchimp Subscription Section (separated from main form) */}
-                <div id="mc_embed_signup" className="mb-4">
-                  <h2 className="text-base font-semibold mb-2">Subscribe to Updates</h2>
-                  <div className="mc-field-group">
-                    <label htmlFor="mce-EMAIL" className="block text-sm font-medium mb-1">
-                      Email Address <span className="text-red-500">*</span>
-                    </label>
-                    <input 
-                      type="email" 
-                      name="EMAIL" 
-                      className="required email w-full p-2 border rounded" 
-                      id="mce-EMAIL" 
-                      required 
-                    />
-                  </div>
-                  {/* Hidden Mailchimp fields */}
-                  <input type="hidden" name="tags" value="6863173" />
-                  <div id="mce-responses" className="clear">
-                    <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
-                    <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
-                  </div>
-                  <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
-                    <input type="text" name="b_dc0338a6720ee1b0490b9e2eb_c9ba2a17ee" tabIndex={-1} />
-                  </div>
-                </div>
-
                 <div className="flex justify-end gap-2">
                   <button
                     type="button"
@@ -144,6 +124,48 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
                   </button>
                 </div>
               </form>
+
+              {/* Mailchimp Subscription Form */}
+              <div id="mc_embed_signup" className="mt-6">
+                <h2 className="text-base font-semibold mb-2">Subscribe to Updates</h2>
+                <form 
+                  action="https://gregorydelacruz.us13.list-manage.com/subscribe/post?u=dc0338a6720ee1b0490b9e2eb&id=c9ba2a17ee&f_id=00847ce9f0" 
+                  method="post" 
+                  id="mc-embedded-subscribe-form" 
+                  name="mc-embedded-subscribe-form" 
+                  className="validate"
+                  onSubmit={handleMailchimpSubmit}
+                >
+                  <div className="mc-field-group">
+                    <label htmlFor="mce-EMAIL" className="block text-sm font-medium mb-1">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      name="EMAIL" 
+                      className="required email w-full p-2 border rounded" 
+                      id="mce-EMAIL" 
+                      required 
+                    />
+                  </div>
+                  <input type="hidden" name="tags" value="6863173" />
+                  <div id="mce-responses" className="clear">
+                    <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
+                    <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
+                  </div>
+                  <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
+                    <input type="text" name="b_dc0338a6720ee1b0490b9e2eb_c9ba2a17ee" tabIndex={-1} />
+                  </div>
+                  <div className="flex justify-end mt-4">
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         )}
