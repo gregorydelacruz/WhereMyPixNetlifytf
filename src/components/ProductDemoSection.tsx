@@ -1,69 +1,69 @@
-import React, { useState } from "react";
-import { cn } from "@/lib/utils";
-import ImageUploader from "@/components/ImageUploader";
-import EmailPopup from "@/components/EmailPopup"; // Import popup component
-import { ProcessedImage } from "@/types/image";
-
-interface ProductDemoSectionProps {
-  images: ProcessedImage[];
-  isProcessing: boolean;
-  handleImagesSelected: (files: File[]) => void;
+/* styles.css */
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+  width: 100%;
 }
 
-const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({ images, isProcessing, handleImagesSelected }) => {
-  const [isEmailPopupOpen, setIsEmailPopupOpen] = useState(false);
+#mc_embed_signup h2 {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
 
-  // Step 1: When "Select Images" is clicked, show popup first
-  const handleBeforeSelectImages = () => {
-    console.log("🚀 Opening Email Popup for Image Upload");
-    setIsEmailPopupOpen(true);
-  };
+.mc-field-group {
+  margin-bottom: 15px;
+}
 
-  // Step 2: After "Subscribe" is clicked, open file input
-  const triggerFileUpload = () => {
-    setIsEmailPopupOpen(false);
-    console.log("📂 Opening file selection...");
-    document.getElementById("hidden-file-input")?.click();
-  };
+.mc-field-group label {
+  display: block;
+  margin-bottom: 5px;
+}
 
-  return (
-    <section id="upload-section" className="w-full max-w-7xl mx-auto px-4 py-16 mb-8">
-      <EmailPopup 
-        isOpen={isEmailPopupOpen} 
-        onClose={() => setIsEmailPopupOpen(false)} 
-        onEmailSubmit={triggerFileUpload} 
-      />
+.mc-field-group input {
+  width: 100%;
+  box-sizing: border-box;
+}
 
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">See It In Action</h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto">Try our image processing tool right now</p>
-      </div>
+.required:before {
+  content: '*';
+  color: #ff0000;
+  margin-right: 2px;
+}
 
-      <div className="relative w-full my-8 flex flex-col items-center">
-        <button
-          onClick={handleBeforeSelectImages}
-          className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-md text-lg font-semibold"
-        >
-          Select Images
-        </button>
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-        {/* Hidden File Input (Triggered After Email Submission) */}
-        <input
-          id="hidden-file-input"
-          type="file"
-          multiple
-          accept="image/*"
-          style={{ display: "none" }}
-          onChange={(e) => {
-            if (e.target.files) {
-              console.log("📸 Images Selected:", e.target.files);
-              handleImagesSelected(Array.from(e.target.files));
-            }
-          }}
-        />
-      </div>
-    </section>
-  );
-};
+.button:hover {
+  background-color: #0056b3;
+}
 
-export default ProductDemoSection;
+/* Additional styles for the popup */
+.glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
