@@ -99,7 +99,7 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
                     className="w-full p-2 border rounded"
                     placeholder="Enter image description"
                     rows={3}
-                  />
+                  
                 </div>
                 
                 {/* Mailchimp Subscription Form */}
