@@ -103,8 +103,7 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
                 </div>
                 
                 {/* Mailchimp Subscription Form */}
-                <div id="mc_embed_signup" className="mb-4">
-                  <h2 className="text-base font-semibold mb-2">Subscribe to Updates</h2>
+                                  <h2 className="text-base font-semibold mb-2">Subscribe to Updates</h2>
                   <form 
                     action="https://gregorydelacruz.us13.list-manage.com/subscribe/post?u=dc0338a6720ee1b0490b9e2eb&id=c9ba2a17ee&f_id=00847ce9f0" 
                     method="post" 
@@ -220,3 +219,4 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
 };
 
 export default ProductDemoSection;
+
