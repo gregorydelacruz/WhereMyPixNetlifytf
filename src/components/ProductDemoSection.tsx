@@ -102,37 +102,30 @@ const ProductDemoSection: React.FC<ProductDemoSectionProps> = ({
                   />
                 </div>
                 
-                {/* Mailchimp Subscription Form */}
+                {/* Mailchimp Subscription Section (separated from main form) */}
                 <div id="mc_embed_signup" className="mb-4">
                   <h2 className="text-base font-semibold mb-2">Subscribe to Updates</h2>
-                  <form 
-                    action="https://gregorydelacruz.us13.list-manage.com/subscribe/post?u=dc0338a6720ee1b0490b9e2eb&id=c9ba2a17ee&f_id=00847ce9f0" 
-                    method="post" 
-                    id="mc-embedded-subscribe-form" 
-                    name="mc-embedded-subscribe-form" 
-                    className="validate"
-                  >
-                    <div className="mc-field-group">
-                      <label htmlFor="mce-EMAIL" className="block text-sm font-medium mb-1">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
-                      <input 
-                        type="email" 
-                        name="EMAIL" 
-                        className="required email w-full p-2 border rounded" 
-                        id="mce-EMAIL" 
-                        required 
-                      />
-                    </div>
-                    <div hidden><input type="hidden" name="tags" value="6863173" /></div>
-                    <div id="mce-responses" className="clear">
-                      <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
-                      <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
-                    </div>
-                    <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
-                      <input type="text" name="b_dc0338a6720ee1b0490b9e2eb_c9ba2a17ee" tabIndex={-1} />
-                    </div>
-                  </form>
+                  <div className="mc-field-group">
+                    <label htmlFor="mce-EMAIL" className="block text-sm font-medium mb-1">
+                      Email Address <span className="text-red-500">*</span>
+                    </label>
+                    <input 
+                      type="email" 
+                      name="EMAIL" 
+                      className="required email w-full p-2 border rounded" 
+                      id="mce-EMAIL" 
+                      required 
+                    />
+                  </div>
+                  {/* Hidden Mailchimp fields */}
+                  <input type="hidden" name="tags" value="6863173" />
+                  <div id="mce-responses" className="clear">
+                    <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
+                    <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
+                  </div>
+                  <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
+                    <input type="text" name="b_dc0338a6720ee1b0490b9e2eb_c9ba2a17ee" tabIndex={-1} />
+                  </div>
                 </div>
 
                 <div className="flex justify-end gap-2">
