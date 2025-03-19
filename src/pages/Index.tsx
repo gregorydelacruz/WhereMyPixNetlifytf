@@ -50,19 +50,7 @@ const Index = () => {
       
       {/* Hero Section */}
       <HeroSection />
-       {/* Email Capture Section - Moved here below the product demo */}
-      <EmailCaptureSection />
-      
-      {/* Social Proof */}
-      <SocialProofSection />
-      
-      {/* Features/Benefits */}
-      <FeaturesSection />
-      
-      {/* Pricing Section */}
-      <PricingSection />
-      
-      {/* Product Demo/Upload Section */}
+       {/* Product Demo/Upload Section */}
       <ProductDemoSection 
         images={images}
         selectedImageIndex={selectedImageIndex}
@@ -77,8 +65,23 @@ const Index = () => {
         predefinedCategories={predefinedCategories}
       />
       
+      
+      {/* Social Proof */}
+      <SocialProofSection />
+      
+      {/* Features/Benefits */}
+      <FeaturesSection />
+      
+      {/* Pricing Section */}
+      <PricingSection />
+      
+     
+      
       {/* Concierge Service Section */}
       <ConciergeSection />
+
+       {/* Email Capture Section - Moved here below the product demo */}
+      <EmailCaptureSection />
       
       {/* FAQ Section */}
       <FaqSection />
