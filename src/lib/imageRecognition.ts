@@ -119,8 +119,8 @@ export const recognizeImage = async (imageFile: File): Promise<any[]> => {
             ],
           },
         ],
-        max_tokens: 250,
-        temperature: 0.5,
+        max_tokens: 150,
+        temperature: 0.2,
       }),
     });
 
