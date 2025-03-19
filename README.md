@@ -46,7 +46,7 @@ searchable, and easily accessible collection of your memories.
 🛠 Installation & Setup
 
 # Clone the repository
-git clone https://github.com/yourusername/photo-organizer-saas.git
+git clone https://github.com/gregorydelacruwhermypixnetlifytf.git
 
 # Navigate to the project folder
 cd photo-organizer-saas
