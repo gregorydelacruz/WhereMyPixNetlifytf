@@ -46,10 +46,10 @@ searchable, and easily accessible collection of your memories.
 🛠 Installation & Setup
 
 # Clone the repository
-git clone https://github.com/gregorydelacruwhermypixnetlifytf.git
+git clone https://github.com/gregorydelacruz/WhereMyPixNetlifytf.git
 
 # Navigate to the project folder
-cd photo-organizer-saas
+cd WhereMyPixNetlifytf
 
 # Install dependencies
 npm install  # or yarn install
