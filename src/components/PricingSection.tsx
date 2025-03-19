@@ -48,9 +48,9 @@ const PricingSection = () => {
         { text: "Basic image categorization", included: true },
         { text: "Download processed images", included: true },
         { text: "Email support", included: false },
-        { text: "Batch processing", included: false },
+        { text: "Batch processing", included: true },
         { text: "Custom categories", included: false },
-        { text: "API access", included: false },
+       
       ],
       callToAction: "Get Started",
       icon: <DollarSign className="h-5 w-5 text-blue-500" />,
@@ -67,13 +67,13 @@ const PricingSection = () => {
       },
       description: "For professionals who need more power.",
       features: [
-        { text: "Process up to 100 images per month", included: true },
+        { text: "Process up to 10,000 images per month", included: true },
         { text: "Advanced image categorization", included: true },
         { text: "Download processed images", included: true },
         { text: "Email support", included: true },
         { text: "Batch processing", included: true },
         { text: "Custom categories", included: true },
-        { text: "API access", included: false },
+        
       ],
       highlighted: true,
       callToAction: "Upgrade Now",
@@ -91,13 +91,13 @@ const PricingSection = () => {
       },
       description: "For teams that need it all.",
       features: [
-        { text: "Process up to 2000 images per month", included: true },
+        { text: "Process up to 100,000 images per month", included: true },
         { text: "Advanced image categorization", included: true },
         { text: "Download processed images", included: true },
         { text: "Priority support", included: true },
         { text: "Batch processing", included: true },
         { text: "Custom categories", included: true },
-        { text: "API access", included: true },
+       
       ],
       callToAction: "Contact Sales",
       icon: <Star className="h-5 w-5 text-purple-500" />,
