@@ -1,4 +1,4 @@
-fgfff
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3dfa9c3a-810f-417c-a11a-3467cd154304/deploy-status)](https://app.netlify.com/sites/wherearemypics-app/deploys)
 
 📸 AI-Powered Photo Organizer SaaS Subscription 
 
