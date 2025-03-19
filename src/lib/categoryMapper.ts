@@ -7,7 +7,6 @@ export const categoryMapping: Record<string, string> = {
   "ball": "Ball",
   "sphere": "Ball",
   "round": "Ball",
-  
   // Sports category
   "sport": "Sports",
   "game": "Sports",
@@ -18,7 +17,6 @@ export const categoryMapping: Record<string, string> = {
   "court": "Sports",
   "field": "Sports",
   "stadium": "Sports",
-  
   // Tennis category
   "tennis": "Tennis", 
   "tennis court": "Tennis", 
@@ -26,8 +24,6 @@ export const categoryMapping: Record<string, string> = {
   "tennis ball": "Tennis",
   "tennis player": "Tennis",
   "tennis match": "Tennis",
-  "tennis tournament": "Tennis",
-  
   // Pickleball category
   "pickleball": "Pickleball",
   "pickleball court": "Pickleball",
@@ -36,7 +32,6 @@ export const categoryMapping: Record<string, string> = {
   "pickleball player": "Pickleball",
   "pickleball match": "Pickleball",
   "pickleball tournament": "Pickleball",
-  
    // More categories
   "ai": "Technology",
   "airplane": "Vehicles",
@@ -116,7 +111,7 @@ export const categoryMapping: Record<string, string> = {
   "forest": "Nature",
   "funny image": "Misc",
   "gallery": "Art",
-  "gamepl": "Entertainment", // Renamed from 'game' as it was duplicate
+  "gameplay": "Entertainment", // Renamed from 'game' as it was duplicate
   "garden": "Plants",
   "golf": "Sports",
   "graduation": "Celebrations",
@@ -224,7 +219,6 @@ export const categoryMapping: Record<string, string> = {
   "taj mahal": "Landmark",
   "tea": "Food",
   "temple": "Historical",
-  "tennis_activity": "Sports", // Renamed to avoid duplicate
   "texture": "Misc",
   "thanksgiving": "Holiday",
   "theater": "Performing Art",
