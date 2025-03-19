@@ -150,7 +150,7 @@ const PricingSection = () => {
         
         toast({
          title: "Demo Mode",
-          description: "Free fpt Charter Members! (That's You) be: " + 
+          description: "Free for Charter Members! (That's You)" + 
             tier.priceId[billingCycle],
         });
         
@@ -271,7 +271,7 @@ const PricingSection = () => {
       
       <div className="mt-12 text-center">
         <p className="text-sm text-muted-foreground">
-          First 100 Customers Get 1000 Free Image Conversions!
+          First 100 Charter Member Customers Get Unlimited Image Conversions for a Year!
         </p>
       </div>
     </section>
