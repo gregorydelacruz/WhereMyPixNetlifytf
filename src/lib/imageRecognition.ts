@@ -153,8 +153,8 @@ export const recognizeImage = async (imageFile: File): Promise<any[]> => {
     description = description.replace(/^A\s+/i, "");
     description = description.replace(/^An\s+/i, "");
 
-    // Extract only the first sentence and limit to first 40 characters
-    let shortDescription = description.split(". ")[0].substring(0, 40).trim();
+    // Extract only the first sentence and limit to first 50 characters
+    let shortDescription = description.split(". ")[0].substring(0, 50).trim();
     console.log("Processed Description:", shortDescription);
 
     // Assign a category
