@@ -271,7 +271,7 @@ const PricingSection = () => {
       
       <div className="mt-12 text-center">
         <p className="text-sm text-muted-foreground">
-          First 100 Charter Member Customers Get Unlimited Image Conversions for a Year!
+          First 100 Charter Members Get Unlimited Use for a Year!
         </p>
       </div>
     </section>
