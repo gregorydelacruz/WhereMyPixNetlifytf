@@ -149,8 +149,8 @@ const PricingSection = () => {
         // window.location.href = mockCheckoutSession.url;
         
         toast({
-          title: "Demo Mode",
-          description: "This is a demo. In a real app, you would be redirected to Stripe Checkout. The priceId used would be: " + 
+         title: "Demo Mode",
+          description: "Free fpt Charter Members! (That's You) be: " + 
             tier.priceId[billingCycle],
         });
         
