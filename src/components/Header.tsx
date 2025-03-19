@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       <div className="flex items-center gap-2">
         <Sparkles className="h-6 w-6 text-amber-500" />
         <h1 className="text-3xl font-bold tracking-tight bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
-          Vision - Free to All During Pre-Release | Please Subscribe First below
+          Vision - Free to All During Pre-Release 
         </h1>
       </div>
       
