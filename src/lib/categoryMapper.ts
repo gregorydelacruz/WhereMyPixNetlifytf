@@ -3,36 +3,7 @@ import { RecognitionResult } from '@/types/image';
 
 // Category mapping for automatic categorization
 export const categoryMapping: Record<string, string> = {
-  // Ball category
-  "ball": "Ball",
-  "sphere": "Ball",
-  "round": "Ball",
-  // Sports category
-  "sport": "Sports",
-  "game": "Sports",
-  "athlete": "Sports",
-  "competition": "Sports",
-  "match": "Sports",
-  "tournament": "Sports",
-  "court": "Sports",
-  "field": "Sports",
-  "stadium": "Sports",
-  // Tennis category
-  "tennis": "Tennis", 
-  "tennis court": "Tennis", 
-  "tennis racket": "Tennis",
-  "tennis ball": "Tennis",
-  "tennis player": "Tennis",
-  "tennis match": "Tennis",
-  // Pickleball category
-  "pickleball": "Pickleball",
-  "pickleball court": "Pickleball",
-  "pickleball paddle": "Pickleball",
-  "pickleball ball": "Pickleball",
-  "pickleball player": "Pickleball",
-  "pickleball match": "Pickleball",
-  "pickleball tournament": "Pickleball",
-   // More categories
+
   "ai": "Technology",
   "airplane": "Vehicles",
   "anniversary": "Celebrations",
