@@ -1,4 +1,6 @@
 
+
+
 import React, { useState } from 'react';
 import { Check, X, DollarSign, Zap, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,7 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
 
 // Initialize Stripe - Replace with your actual publishable key in production
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+const stripePromise = loadStripe('pk_live_51QoERWEPBvvHFB5vl1ypa1TR5RAVI1VrVVTs2mQosfw1FjVPczE4Yv2B2rXtBB9ksfRvoXM3xyXaQ1280H1hG1CB00b46pAWDh');
 
 type PricingTier = {
   name: string;
