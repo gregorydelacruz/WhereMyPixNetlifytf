@@ -177,7 +177,7 @@ const PricingSection = () => {
           )}>
             Yearly <span className="  ? 'text-foreground font-medium' : 'text-muted-foreground'
           )}>
-            Yearly <span className="text-xs text-green-500 font-medium">Save up to 35%</span>
+            
           </span>
         </div>
       </div>
