@@ -1,16 +1,9 @@
-
-
-
 import React, { useState } from 'react';
 import { Check, X, DollarSign, Zap, Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { loadStripe } from '@stripe/stripe-js';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
-
-// Initialize Stripe - Replace with your actual publishable key in production
-const stripePromise = loadStripe('pk_live_51QoERWEPBvvHFB5vl1ypa1TR5RAVI1VrVVTs2mQosfw1FjVPczE4Yv2B2rXtBB9ksfRvoXM3xyXaQ1280H1hG1CB00b46pAWDh');
 
 type PricingTier = {
   name: string;
@@ -52,7 +45,6 @@ const PricingSection = () => {
         { text: "Email support", included: false },
         { text: "Batch processing", included: true },
         { text: "Custom categories", included: false },
-       
       ],
       callToAction: "Get Started",
       icon: <DollarSign className="h-5 w-5 text-blue-500" />,
@@ -75,7 +67,6 @@ const PricingSection = () => {
         { text: "Email support", included: true },
         { text: "Batch processing", included: true },
         { text: "Custom categories", included: true },
-        
       ],
       highlighted: true,
       callToAction: "Upgrade Now",
@@ -99,7 +90,6 @@ const PricingSection = () => {
         { text: "Priority support", included: true },
         { text: "Batch processing", included: true },
         { text: "Custom categories", included: true },
-       
       ],
       callToAction: "Contact Sales",
       icon: <Star className="h-5 w-5 text-purple-500" />,
@@ -130,34 +120,18 @@ const PricingSection = () => {
     try {
       setIsLoading(tier.name);
 
-      const stripe = await stripePromise;
-      if (!stripe) throw new Error("Stripe failed to load");
-
-      // In a real app, this would be an API call to your server
-      // which would create a Checkout Session and return the ID
-      const mockCheckoutSession = {
-        id: `cs_test_${Math.random().toString(36).substring(2, 15)}`,
-        url: `https://checkout.stripe.com/pay/${Math.random().toString(36).substring(2, 15)}`
-      };
-
-      toast({
-        title: "Redirecting to Checkout",
-        description: "Please wait while we redirect you to our secure payment page.",
-      });
-
-      // Simulate API call delay
-      setTimeout(() => {
-        // In a real app, you would redirect to the checkout session URL
-        // window.location.href = mockCheckoutSession.url;
-        
+      if (tier.name === "Pro") {
+        const proSubscriptionUrl = 'https://buy.stripe.com/4gwdT3baMfOP01O8ww';
+        window.open(proSubscriptionUrl, '_blank', 'noopener,noreferrer');
         toast({
-         title: "Demo Mode",
-          description: "Free for Charter Members! (That's You)" + 
-            tier.priceId[billingCycle],
+          title: "Redirecting to Checkout",
+          description: "Please wait while we redirect you to our secure payment page.",
         });
-        
-        setIsLoading(null);
-      }, 1500);
+      } else {
+        // Handle other tiers if necessary
+      }
+      
+      setIsLoading(null);
       
     } catch (error) {
       console.error("Payment error:", error);
@@ -199,6 +173,8 @@ const PricingSection = () => {
           <span className={cn(
             "text-sm transition-colors",
             billingCycle === 'yearly' ? 'text-foreground font-medium' : 'text-muted-foreground'
+          )}>
+            Yearly <span className="  ? 'text-foreground font-medium' : 'text-muted-foreground'
           )}>
             Yearly <span className="text-xs text-green-500 font-medium">Save up to 35%</span>
           </span>
