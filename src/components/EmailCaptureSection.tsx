@@ -18,7 +18,7 @@ const EmailCaptureSection: React.FC = () => {
     <section className="w-full bg-muted/50 py-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="w-full md:w-3/4 mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center">You Must Subscribe to Use the Tool Free during Testing</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">Subscribe to Use the Tool Free during Testing</h2>
           <p className="text-muted-foreground mb-6 text-center">Join our newsletter to receive tips, updates and special offers.</p>
           
           <form onSubmit={handleSubscribe} className="space-y-4 max-w-xl mx-auto">
