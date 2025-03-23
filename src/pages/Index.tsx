@@ -9,7 +9,6 @@ import SocialProofSection from '@/components/SocialProofSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import PricingSection from '@/components/PricingSection';
 import ProductDemoSection from '@/components/ProductDemoSection';
-import ContactSection from '@/components/ContactSection';
 import FaqSection from '@/components/FaqSection';
 import ConciergeSection from '@/components/ConciergeSection';
 import CtaSection from '@/components/CtaSection';
@@ -86,8 +85,7 @@ const Index = () => {
       {/* FAQ Section */}
       <FaqSection />
       
-      {/* Contact Form Section */}
-      <ContactSection />
+    
       
       {/* CTA Section */}
       <CtaSection />
