@@ -5,30 +5,29 @@ import { Button } from '@/components/ui/button';
 import { loadStripe } from '@stripe/stripe-js';
 import { useToast } from '@/hooks/use-toast';
 import { cn } from '@/lib/utils';
+const PricingSection = () => {
+  const [isProcessing, setIsProcessing] = useState<string | null>(null);
 
-// Initialize Stripe - Replace with your actual publishable key in production
-const stripePromise = loadStripe('pk_live_51QoERWEPBvvHFB5vl1ypa1TR5RAVI1VrVVTs2mQosfw1FjVPczE4Yv2B2rXtBB9ksfRvoXM3xyXaQ1280H1hG1CB00b46pAWDh');
+ const handleSelectPlan = async (plan: PricingPlan) => {
+    if (plan.id === 'free') {
+      toast.success('You have successfully subscribed to the Free plan');
+      return;
+    }
+    
+    if (plan.id === 'enterprise') {
+      toast.success('Thank you for your interest! Our sales team will contact you shortly.');
+      return;
+    }
+    
+    if (plan.id === 'pro') {
+      // Redirect to Stripe payment link for the Pro plan
+      window.location.href = 'https://buy.stripe.com/00gcPM4SUfm3apGcMM';
+      return;
+    }
 
-type PricingTier = {
-  name: string;
-  price: {
-    monthly: number;
-    yearly: number;
+    toast.error('This plan is not available for purchase yet');
   };
-  description: string;
-  features: {
-    text: string;
-    included: boolean;
-  }[];
-  highlighted?: boolean;
-  callToAction: string;
-  icon: React.ReactNode;
-  priceId: {
-    monthly: string; 
-    yearly: string;
-  };
-}
-
+  
 const PricingSection = () => {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [isLoading, setIsLoading] = useState<string | null>(null);
@@ -142,31 +141,7 @@ const PricingSection = () => {
         description: "Please wait while we redirect you to our secure payment page.",
       });
 
-      // Simulate API call delay
-      setTimeout(() => {
-        // In a real app, you would redirect to the checkout session URL
-        // window.location.href = mockCheckoutSession.url;
-        
-        toast({
-         title: "Demo Mode",
-          description: "Free for Charter Members! (That's You)" + 
-            tier.priceId[billingCycle],
-        });
-        
-        setIsLoading(null);
-      }, 1500);
-      
-    } catch (error) {
-      console.error("Payment error:", error);
-      toast({
-        title: "Payment Error",
-        description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive",
-      });
-      setIsLoading(null);
-    }
-  };
-
+     
   return (
     <section id="pricing-section" className="w-full max-w-7xl mx-auto px-4 py-16">
       <div className="text-center mb-12">
